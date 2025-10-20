@@ -1,18 +1,34 @@
-build/
-dist/
-*.egg-info/
-**/__pycache__/
+# === Models & checkpoints ===
+*.pth
+*.pt
+*.ckpt
+*.safetensors
+*.t7
+*.onnx
 
-**/.ipynb_checkpoints
-**/.ipynb_checkpoints/**
+# === Large data/artifacts ===
+*.npz
+*.npy
+*.pkl
+*.tar
+*.tar.gz
+*.zip
 
-**/notebooks
+# === Common big dirs ===
+data/
+datasets/
+outputs/
+runs/
+logs/
+checkpoints/
 
-# Ignore shell scripts
-*.sh
+# === Python junk ===
+__pycache__/
+*.py[cod]
+.venv/
+env/
+venv/
 
-# Ignore swap files
-*.swp
-
-# Ignore vscode directory
-.vscode/
+# keep empty dirs (exceptions)
+!data/.gitkeep
+!checkpoints/.gitkeep
